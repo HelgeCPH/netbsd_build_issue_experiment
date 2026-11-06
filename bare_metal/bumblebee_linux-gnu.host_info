@@ -1,0 +1,107 @@
+- `uname -a`:
+Linux bumblebee 5.19.0-76051900-generic #202207312230~1660780566~22.04~9d60db1 SMP PREEMPT_DYNAMIC Thu A x86_64 x86_64 x86_64 GNU/Linux
+- `lsb_release -a`:
+Distributor ID:	Pop
+Description:	Pop!_OS 22.04 LTS
+Release:	22.04
+Codename:	jammy
+
+- `ls -la $(which sh)`:
+lrwxrwxrwx 1 root root 4 Mar 23  2022 /usr/bin/sh -> dash
+- `ls -la $(which $SHELL):`
+-rwxr-xr-x 1 root root 1396520 Jan  6  2022 /bin/bash
+
+- C compiler version:
+cc (Ubuntu 11.2.0-19ubuntu1) 11.2.0
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+- Linker compiler version:
+GNU ld (GNU Binutils for Ubuntu) 2.38
+Copyright (C) 2022 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+- Std dynamic linker/loader version:
+ld.so (Ubuntu GLIBC 2.35-0ubuntu3.13) stable release version 2.35.
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+- Stdlib version:
+ldd (Ubuntu GLIBC 2.35-0ubuntu3.1) 2.35
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Written by Roland McGrath and Ulrich Drepper.
+
+LANG=en_US.UTF-8
+LANGUAGE=
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=
+
+Edited environment (removed private entries before data sharing): 
+SHELL=/bin/bash
+SESSION_MANAGER=local/bumblebee:@/tmp/.ICE-unix/5235,unix/bumblebee:/tmp/.ICE-unix/5235
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-cinnamon:/etc/xdg
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GTK_IM_MODULE=ibus
+MANDATORY_PATH=/usr/share/gconf/cinnamon.mandatory.path
+DOTNET_ROOT=/usr/lib/dotnet/dotnet6-6.0.110
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=cinnamon
+GTK_MODULES=gail:atk-bridge
+PWD=/home/ropf/Documents/workspace/C/NetBSD/build_issue_experiment/bare_metal
+XDG_SESSION_DESKTOP=cinnamon
+LOGNAME=ropf
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+SYSTEMD_EXEC_PID=18495
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+WINDOWPATH=2
+HOME=/home/ropf
+USERNAME=ropf
+LANG=en_US.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+XDG_CURRENT_DESKTOP=X-Cinnamon
+VTE_VERSION=6800
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/ecfeb9be_b33b_4489_b3b6_97c2bd3c1a16
+DOTNET_BUNDLE_EXTRACT_BASE_DIR=/home/ropf/.cache/dotnet_bundle_extract
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+GTK_OVERLAY_SCROLLING=0
+DEFAULTS_PATH=/usr/share/gconf/cinnamon.default.path
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=ropf
+GNOME_TERMINAL_SERVICE=:1.142
+DISPLAY=:1
+SHLVL=2
+POLITE_MINER_HEADERS={"User-Agent": "DaSEA Research Project - Please do not ban, https://dasea-project.github.io/DASEA", "From": "daseaITU@gmail.com"}
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/1000
+GTK3_MODULES=xapp-gtk3-module
+XDG_DATA_DIRS=/usr/share/gnome:/usr/share/cinnamon:/usr/share/gnome:/home/ropf/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+PATH=/home/ropf/.local/bin:/home/ropf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/ropf/.dotnet/tools:/home/ropf/.local/share/JetBrains/Toolbox/scripts
+GDMSESSION=cinnamon
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+OLDPWD=/home/ropf/Documents/workspace/C/NetBSD/build_issue_experiment
+_=/usr/bin/env
+
+Experiment conducted on Git commit (https://github.com/NetBSD/src.git):
+4198f5370c187384b1de46b9b0fcd04462a420e0

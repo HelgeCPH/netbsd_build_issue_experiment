@@ -1,0 +1,77 @@
+- `uname -a`:
+Linux ubuntu2204 5.15.0-160-generic #170-Ubuntu SMP Wed Oct 1 10:06:56 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+- `lsb_release -a`:
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.5 LTS
+Release:	22.04
+Codename:	jammy
+
+- `ls -la $(which sh)`:
+lrwxrwxrwx 1 root root 4 Mar 23  2022 /usr/bin/sh -> dash
+- `ls -la $(which $SHELL):`
+-rwxr-xr-x 1 root root 1396520 Mar 14  2024 /bin/bash
+
+- C compiler version:
+cc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+- Linker compiler version:
+GNU ld (GNU Binutils for Ubuntu) 2.38
+Copyright (C) 2022 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+- Std dynamic linker/loader version:
+ld.so (Ubuntu GLIBC 2.35-0ubuntu3.15) stable release version 2.35.
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+- Stdlib version:
+ldd (Ubuntu GLIBC 2.35-0ubuntu3.11) 2.35
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Written by Roland McGrath and Ulrich Drepper.
+
+LANG=en_US.UTF-8
+LANGUAGE=
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=
+
+Edited environment (removed private entries before data sharing): 
+SHELL=/bin/bash
+PWD=/home/vagrant
+LOGNAME=vagrant
+XDG_SESSION_TYPE=tty
+MOTD_SHOWN=pam
+HOME=/home/vagrant
+LANG=en_US.UTF-8
+SSH_CONNECTION=10.0.2.2 42788 10.0.2.15 22
+XDG_SESSION_CLASS=user
+TERM=vt100
+USER=vagrant
+SHLVL=2
+XDG_SESSION_ID=3
+XDG_RUNTIME_DIR=/run/user/1000
+SSH_CLIENT=10.0.2.2 42788 22
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+_=/usr/bin/env
+
+Experiment conducted on Git commit (https://github.com/NetBSD/src.git):
+4198f5370c187384b1de46b9b0fcd04462a420e0
