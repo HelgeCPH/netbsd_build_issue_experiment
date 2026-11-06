@@ -5,18 +5,28 @@ I have a problem building NetBSD 11 from source on.
 
 ## To conduct the experiment
 
+To conduct the experiment of building NetBSD 11 locally on your computer, you need to clone this repository: 
+
+```bash
+git clone git@github.com:HelgeCPH/netbsd_build_issue_experiment.git¨
+```
+
+To run the experiment directly on your computer, i.e., _bare metal_ do 
+
+```bash
+cd bare_metal
+chmod u+x *.sh
+
+
+```
+
 Dependencies:
 - VirtualBox
 - vagrant
 - vagrant-ssh
 
-Conduct
 
-```
-git clone
-```
-
-Since executable bits are not preserved when cloning repositories, make the scripts that are needed for this experiment executable
+Since executable bits are not preserved when cloning repositories from GitHub, make the scripts for this experiment executable
 
 ```
 chmod u+x collect_host_info.sh
@@ -73,26 +83,28 @@ Once done, the process generated five files per virtual machine:
 ## Results
 
 
-| OS            | Bare Metal        | Bare Metal Min. Env. |
-|---------------|-------------------|----------------------|
-| ubuntu22.04   | tools ✔ release ✗ | tools ✔ release ✗    |
-| ubuntu24.04   | tools ✔ release ✗ | tools ✔ release ✗    |
-| debian-13     |                   |                      |
-| popos-22.04   | tools ✔ release ✗ | tools ✔ release ✗    |
-| popos-24.04   | tools ✔ release ✗ | tools ✔ release ✗    |
-| freebsd14     |                   |                      |
-| MacOS Sequoia | tools ✔ release ✗ | tools ✔ release ✗    |
+| OS             | Bare Metal        | Bare Metal Min. Env. |
+|----------------|-------------------|----------------------|
+| ubuntu22.04    | tools ✔ release ✗ | tools ✔ release ✗    |
+| ubuntu24.04    | tools   release   | tools   release      |
+| debian-13      |                   |                      |
+| popos-22.04    | tools   release   | tools   release      |
+| popos-24.04    | tools   release   | tools   release      |
+| freebsd14      |                   |                      |
+| MacOS Sequoia* | tools   release   | tools   release      |
 
-
+* Note: For MacOS Sequoia, I conducted the experiment twice.
+Once in the default `zsh` environment and once again after changing the default shell to `bash` with `chsh -s /bin/bash`.
+The results are the same for both cases.
 
 
 | OS            | VM VirtualBox     | VM VirtualBox Min. Env. |
 |---------------|-------------------|-------------------------|
 | ubuntu22.04   | tools ✔ release ✔ | tools ✔ release ✔       |
-| ubuntu24.04   | tools ✔ release ✔ | tools ✔ release ✔       |
-| debian-13     | tools ✔ release ✔ | tools ✔ release ✔       |
-| popos-22.04   | tools ✔ release ✔ | tools ✔ release ✔       |
-| freebsd14     | tools ✔ release ✔ | tools ✔ release ✔       |
+| ubuntu24.04   | tools   release   | tools   release         |
+| debian-13     | tools   release   | tools   release         |
+| popos-22.04   | tools   release   | tools   release         |
+| freebsd14     | tools   release   | tools   release         |
 
 
 
