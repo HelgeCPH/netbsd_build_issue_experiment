@@ -12,6 +12,8 @@ fi
 if [[ "$OSTYPE" == 'darwin'* ]] &> /dev/null; then
     echo '- `sysctl kern...`:' >> $OUTFILE
     sysctl kern.version kern.ostype kern.osrelease kern.osrevision >> $OUTFILE
+    echo '- `sw_vers`: ' >> $OUTFILE
+    sw_vers >> $OUTFILE
 fi
 
 echo '' >> $OUTFILE
@@ -24,11 +26,13 @@ echo '' >> $OUTFILE
 echo '- C compiler version:' >> $OUTFILE
 cc --version >> $OUTFILE
 echo '- Linker compiler version:' >> $OUTFILE
-ld --version >> $OUTFILE
-echo '- Std dynamic linker/loader version:' >> $OUTFILE
-/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 --version >> $OUTFILE
-echo '- Stdlib version:' >> $OUTFILE
-ldd --version >> $OUTFILE
+if [[ "$OSTYPE" == 'linux-gnu' ]] &> /dev/null; then
+    ld --version >> $OUTFILE
+    echo '- Std dynamic linker/loader version:' >> $OUTFILE
+    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 --version >> $OUTFILE
+    echo '- Stdlib version:' >> $OUTFILE
+    ldd --version >> $OUTFILE
+fi
 
 echo '' >> $OUTFILE
 locale >> $OUTFILE

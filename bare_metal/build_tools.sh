@@ -1,9 +1,12 @@
-cd ../netbsd-11-src
+OUTFILE=$(pwd)/$(hostname)_$OSTYPE
+if [[ "$OSTYPE" == 'darwin'* ]] &> /dev/null; then
+    NOPROC=$(sysctl -n hw.ncpu)
+else
+    NOPROC=$(lscpu | grep "^CPU(s):" | awk '{print $2}')
+fi
 
 echo "Start building tools now..."
-
-OUTFILE=./$(hostname)_$OSTYPE
-NOPROC=$(lscpu | grep "^CPU(s):" | awk '{print $2}')
+cd ../netbsd-11-src
 
 ./build.sh -U -u -j$NOPROC -m amd64 -a x86_64 -O $HOME/obj tools > ${OUTFILE}_tools.log 2>&1
 EXITCODE=$?
@@ -22,7 +25,7 @@ EXITCODE=$?
 
 if [[ $EXITCODE -eq 0 ]] && grep -Fq -- "===> build.sh ended" ${OUTFILE}_tools_small_env.log; then
   echo "Tools built successfully!"
-  gzip ${OUTFILE}_tools_small_env.log
 else
   echo "Building tools in minimal environment failed!" >&2
 fi
+gzip ${OUTFILE}_tools_small_env.log
